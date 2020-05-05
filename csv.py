@@ -12,16 +12,10 @@ with open('test.txt') as csv_file:
 
     for each_line in csv_file: 
         create_list = each_line.split(",")
+        # print(json.dumps(create_list))
+        print(json.dumps({'user_id': create_list[0], 'username': create_list[1],
+            'email' : create_list[2], 'level_of_authorization' : create_list[3],
+            'date_of_birth' : create_list[4]
+            }, sort_keys=True, indent=4))
         
-        print(create_list[0])
-
-
-# convert csv file into a dictionary (json format)
-
-
-# {
-    
-#     "id": 9737452,
-#     "username":
-# }
 
